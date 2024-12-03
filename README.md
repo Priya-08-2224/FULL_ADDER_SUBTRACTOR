@@ -1,6 +1,8 @@
-# FULL_ADDER_SUBTRACTOR
+**EXP4:FULL ADDER AND SUBTRACTOR**
 
-Implementation-of-Full-Adder-and-Full-subtractor-circuit
+NAME : PRIYADHARSHINI J 
+
+REF NO : 24901116
 
 **AIM:**
 
@@ -38,18 +40,90 @@ Borrow out = A'Bin + A'B + BBin
 
 **Truthtable**
 
+FULL ADDER
+
+![image](https://github.com/user-attachments/assets/bf93d74c-0c0a-4b26-98bd-f3ee46021bbd)
+
+
+FULL SUBRACTOR
+
+![image](https://github.com/user-attachments/assets/68be7987-c87f-49c9-a724-2a5951015195)
+
+
 **Procedure**
 
-Write the detailed procedure here
+1.	Type the program in Quartus software.
+
+2.	Compile and run the program.
+
+3.	Generate the RTL schematic and save the logic diagram.
+
+4.	Create nodes for inputs and outputs to generate the timing diagram.
+
+5.	For different input combinations generate the timing diagram.
 
 **Program:**
 
-/* Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming. Developed by: RegisterNumber:
-*/
+ Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming. 
+
+ FULL ADDER
+
+
+module fulladder(a,b,cin,sum,carry);
+
+input a,b,cin;
+
+output sum,carry;
+
+assign sum=( (a ^ b)^cin);
+
+assign carry= ( (a & b)| ( cin &(a ^ b )));
+
+endmodule
+
+
+FULL SUBRACTOR
+
+module fs(a,b,bin,difference,borrow);
+
+input a,b,bin;
+
+output difference,borrow;
+
+assign difference= ( (a ^ b)^bin);
+
+assign borrow= ( ( a & b)| ( bin & ((a ^ b ))));
+
+endmodule
+ 
 
 **RTL Schematic**
 
+FULL ADDER
+
+![screen shot of full adder](https://github.com/user-attachments/assets/19cc25d9-c917-4349-bdb5-79b1f2f21a8f)
+
+
+FULL SUBRACTOR
+
+
+![screen shot of full subractor](https://github.com/user-attachments/assets/1d2dea36-cf90-48e4-8063-bb6da30b01e4)
+
+
+
 **Output Timing Waveform**
+
+FULL ADDER
+
+![wave form of full adder](https://github.com/user-attachments/assets/736b335f-8d71-405e-83ab-40fb53ad4268)
+
+
+FULL SUBRACTOR
+
+
+![waveform of full subractor](https://github.com/user-attachments/assets/8e788c29-62ce-4d1e-a5e8-b2e984266327)
+
+
 
 **Result:**
 
